@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <h1>pass single data from parent to child component</h1>
+  <div class="row">
+    <div class="col-md-4 bt">
+      <header>
+      <h4 style="background-color: aqua;">this is a app.component page...</h4></header>
+      <p>NAME:--</p>
+      <input type="text" placeholder="please enter your name..." #n>
+      <!-- <button class="btn btn-danger" (click)="send(n)">send..</button> --> 
+      <p>EMAIL ID:--</p>
+      <input type="email" placeholder="please enter your email..." #n1>
+      <button class="btn btn-danger" (click)="send(n,n1)">send..</button>
+    </div>
+
+   
+    <div class="col-md-4 bt">
+      <header>
+        <h4 style="background-color: aqua;">this is a 1st child component page...</h4></header>
+        <app-child1 [input_value1]="sms"></app-child1>
+        
+    </div>
+
+
+    <div class="col-md-4">
+      <header>
+        <h4 style="background-color: aqua;">this is a 2nd child component page...</h4></header>
+        <app-child2 [input_value2]="mail"></app-child2>
+        
+    </div>
+  </div>
+</div>
